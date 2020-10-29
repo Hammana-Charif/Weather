@@ -1,0 +1,38 @@
+<section>
+    <div class="display-flex space_between">
+      <p class="color-white margin_auto">result works!</p>
+
+      <div *ngIf="city" class="background-color-black">
+        <div class="display-flex">
+          <div class="margin_auto color-white">
+            <h1 class="text_size_50">{{ city.name }}</h1>
+          </div>
+        </div>
+        <div class="display-flex">
+          <div class="margin_auto color-white text_size_30">
+            Air quality : {{ city.airQuality }}
+          </div>
+        </div>
+        <div class="display-flex">
+          <div class="margin_auto color-white text_size_30">
+            Fine particle : {{ city.fineParticle }}
+          </div>
+        </div>
+        <div class="display-flex">
+          <div class="margin_auto color-white text_size_30">
+            Heavy particle : {{ city.heavyParticle }}
+          </div>
+        </div>
+        <div class="display-flex">
+          <div class="margin_auto color-white text_size_30">
+            Ozone : {{ city.ozone }}
+          </div>
+        </div>
+        <div class="display-flex">
+          <div class="margin_auto color-white text_size_30">
+            Time : {{ city.datetime }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
