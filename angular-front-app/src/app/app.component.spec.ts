@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
-import { SearchComponent} from './pollution/search/search.component';
-import { ResultComponent } from './pollution/result/result.component';
+import {TestBed} from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
+import {AppComponent} from './app.component';
+import {SearchComponent} from './pollution/search/search.component';
+import {ResultComponent} from './pollution/result/result.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
