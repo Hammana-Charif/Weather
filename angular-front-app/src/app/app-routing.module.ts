@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchComponent} from "./search/search.component";
-import { ResultComponent} from "./result/result.component";
+import { AppComponent } from './app.component';
+import { SearchComponent} from './pollution/search/search.component';
+import { ResultComponent} from './pollution/result/result.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'home', component: SearchComponent },
+  { path: 'home', component: AppComponent},
+  { path: 'search', component: SearchComponent },
   { path: 'result', component: ResultComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
@@ -13,4 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [SearchComponent, ResultComponent];
+export const routingComponents = [AppComponent, SearchComponent, ResultComponent];

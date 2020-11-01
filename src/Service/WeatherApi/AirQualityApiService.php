@@ -51,7 +51,7 @@ class AirQualityApiService
     {
         $this->httpClient = $httpClient;
         $this->token = $token;
-        $this->url = "https://$host";
+        $this->url = "http://$host";
         $this->apiCityValidator = $apiCityValidator;
     }
 
@@ -74,7 +74,7 @@ class AirQualityApiService
                 json_decode($json, true, 512, JSON_THROW_ON_ERROR)
             );
         } catch (Exception $exception) {
-            $exception->getMessage();
+            echo $exception->getMessage();
         }
     }
 }

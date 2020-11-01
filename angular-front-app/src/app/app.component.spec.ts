@@ -1,7 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { SearchComponent} from "./search/search.component";
+import { SearchComponent} from './pollution/search/search.component';
+import { ResultComponent } from './pollution/result/result.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        SearchComponent
+        SearchComponent,
+        ResultComponent
       ],
     }).compileComponents();
   });

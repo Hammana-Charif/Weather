@@ -1,26 +1,10 @@
-<mat-toolbar class="background-color-black display-flex">
-  <a id="head" class="color-white text_size_50 margin_auto">Weather</a>
-  <a routerLink="/home" class="color-white margin_auto">Search</a>
-  <a href="/login" class="color-white margin_auto">Sign In</a>
-  <a href="/user/new" class="color-white margin_auto">Sign Up</a>
-</mat-toolbar>
+<main id="homeMain">
+  <router-outlet></router-outlet>
+</main>
 
-<body id="cityMain">
-<section class="display-flex column">
-  <app-search class="margin_auto"></app-search>
-  <router-outlet class="margin_auto"></router-outlet>
-</section>
-<section class="display-flex column">
-  <router-outlet class="margin_auto"></router-outlet>
-</section>
-</body>
 
-<mat-toolbar class="background-color-black display-flex">
 
-  <a class="color-white margin_auto">Charif Hammana</a>
-  <a class="color-white margin_auto" href="">
-    <button>raikho_99@hotmail.com</button>
-  </a>
-  <a class="color-white margin_auto" href="https://github.com/Hammana-Charif/"><button>GitHub</button></a>
-  <a class="color-white margin_auto" href="#head"><button>Go to the top</button></a>
-</mat-toolbar>
+
+
+
+

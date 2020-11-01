@@ -55,7 +55,7 @@ class CityCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         try {
-            $cityName = 'Paris';
+            $cityName = 'Marseille';
             dump($this->apiCityService->findByCity($cityName));
             $output->writeln('Funded city : ' . $cityName);
             return static::SUCCESS;

@@ -1,0 +1,27 @@
+<main id="searchMain" class="display-flex">
+  <section class="background-color-black margin_auto">
+    <div class="display-flex space_between">
+      <div class="margin_auto">
+        <label>
+          <input #input id="searchByName" type="search" placeholder="City name"/>
+        </label>
+        <a>
+          <button (click)="search(input.value)">Search</button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div *ngIf="city" class="margin_auto absolute">
+    <div class="margin_auto color-white">
+      <p class="text_size_50">{{ city.name }}</p>
+    </div>
+  </div>
+  <mat-grid-list *ngIf="city" cols="2" rowHeight="5:0.5">
+    <mat-grid-tile>Air quality : {{ city.airQuality }}</mat-grid-tile>
+    <mat-grid-tile>Fine particle : {{ city.fineParticle }}</mat-grid-tile>
+    <mat-grid-tile>Heavy particle : {{ city.heavyParticle }}</mat-grid-tile>
+    <mat-grid-tile>Time : {{ city.datetime }}</mat-grid-tile>
+  </mat-grid-list>
+</main>
+
+

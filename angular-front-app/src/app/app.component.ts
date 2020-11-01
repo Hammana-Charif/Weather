@@ -32,7 +32,7 @@ export class AppComponent {
   /**
    *
    */
-  render() {
+  render(): void {
     document.querySelector(this.selector);
   }
 }

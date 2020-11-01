@@ -17,7 +17,7 @@ class City
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private ?int $id;
+    private ?int $cityId;
 
     /**
      * @Groups("showCity")
@@ -58,17 +58,17 @@ class City
     /**
      * @return int|null
      */
-    public function getId(): ?int
+    public function getCityId(): ?int
     {
-        return $this->id;
+        return $this->cityId;
     }
 
     /**
-     * @param int|null $id
+     * @param int|null $cityId
      */
-    public function setId(?int $id): void
+    public function setCityId(?int $cityId): void
     {
-        $this->id = $id;
+        $this->cityId = $cityId;
     }
 
     /**

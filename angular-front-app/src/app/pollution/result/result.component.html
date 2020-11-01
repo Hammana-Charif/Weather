@@ -1,0 +1,25 @@
+<main id="resultMain" class="display-flex column space_between">
+  <div *ngIf="city" class="margin_auto absolute">
+    <div class="margin_auto color-white">
+      <h1 class="text_size_50">{{ city.name }}</h1>
+    </div>
+  </div>
+  <mat-grid-list *ngIf="city" cols="2" rowHeight="5:0.5">
+    <mat-grid-tile>Air quality : {{ city.airQuality }}</mat-grid-tile>
+    <mat-grid-tile>Fine particle : {{ city.fineParticle }}</mat-grid-tile>
+    <mat-grid-tile>Heavy particle : {{ city.heavyParticle }}</mat-grid-tile>
+    <mat-grid-tile>Time : {{ city.datetime }}</mat-grid-tile>
+  </mat-grid-list>
+
+<!--  <div *ngIf="data" class="margin_auto absolute">-->
+<!--    <div class="margin_auto color-white">-->
+<!--      <h1 class="text_size_50">{{ data.name }}</h1>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <mat-grid-list *ngIf="data" cols="2" rowHeight="5:0.5">-->
+<!--    <mat-grid-tile>Air quality : {{ data }}</mat-grid-tile>-->
+<!--    <mat-grid-tile>Fine particle : {{ data.fineParticle }}</mat-grid-tile>-->
+<!--    <mat-grid-tile>Heavy particle : {{ data.heavyParticle }}</mat-grid-tile>-->
+<!--    <mat-grid-tile>Time : {{ data.datetime }}</mat-grid-tile>-->
+<!--  </mat-grid-list>-->
+</main>

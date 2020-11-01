@@ -2,14 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AngularFrontApp</title>
+  <title>Weather</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body class="mat-typography">
-  <app-root></app-root>
+<mat-toolbar class="background-color-black display-flex">
+  <a href="/home" id="head" class="color-white text_size_50 margin_auto">Weather</a>
+  <a href="/search" class="color-white margin_auto">Search</a>
+  <a href="/login" class="color-white margin_auto">Sign In</a>
+  <a href="/user/new" class="color-white margin_auto">Sign Up</a>
+</mat-toolbar>
+
+<!--<mat-toolbar color="primary">-->
+<!--  <mat-toolbar-row>-->
+<!--    <span>My App</span>-->
+<!--    <span class="example-spacer"></span>-->
+<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--      <mat-icon>menu</mat-icon>-->
+<!--    </button>-->
+<!--  </mat-toolbar-row>-->
+
+<!--  <mat-toolbar-row>-->
+<!--    <span>Second Line</span>-->
+<!--    <span class="example-spacer"></span>-->
+<!--    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">-->
+<!--      <mat-icon>favorite</mat-icon>-->
+<!--    </button>-->
+<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">-->
+<!--      <mat-icon>share</mat-icon>-->
+<!--    </button>-->
+<!--  </mat-toolbar-row>-->
+<!--</mat-toolbar>-->
+
+<app-root></app-root>
+
+<mat-toolbar class="background-color-black display-flex">
+  <a class="color-white margin_auto">Charif Hammana</a>
+  <a class="color-white margin_auto" href="">
+    <button>raikho_99@hotmail.com</button>
+  </a>
+  <a class="color-white margin_auto" href="https://github.com/Hammana-Charif/">
+    <button>GitHub</button>
+  </a>
+  <a class="color-white margin_auto" href="#head">
+    <button>Go to the top</button>
+  </a>
+</mat-toolbar>
 </body>
 </html>
