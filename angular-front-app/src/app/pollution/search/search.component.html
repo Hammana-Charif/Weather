@@ -1,16 +1,15 @@
 <main id="searchMain" class="display-flex">
-  <section class="background-color-black margin_auto">
-    <div class="display-flex space_between">
-      <div class="margin_auto">
-        <label>
-          <input #input id="searchByName" type="search" placeholder="City name"/>
-        </label>
-        <a>
-          <button (click)="search(input.value)">Search</button>
-        </a>
-      </div>
+  <div id="mat-spinner-div" class="background-color-white">
+    <mat-spinner *ngIf="showSpinner" class="margin_auto"></mat-spinner>
+  </div>
+  <div class="display-flex margin_auto">
+    <div class="margin_auto">
+      <label>
+        <input #input (keyup.enter)="search(input.value)" id="searchByName" type="search" placeholder="City name"/>
+      </label>
+      <a>
+        <button (click)="search(input.value)">Search</button>
+      </a>
     </div>
-  </section>
+  </div>
 </main>
-
-

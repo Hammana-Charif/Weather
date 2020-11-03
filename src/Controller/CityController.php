@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\City;
-use App\Form\City1Type;
+use App\Form\CityType;
 use App\Repository\CityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,7 +35,7 @@ class CityController extends AbstractController
     public function new(Request $request): Response
     {
         $city = new City();
-        $form = $this->createForm(City1Type::class, $city);
+        $form = $this->createForm(CityType::class, $city);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -72,7 +72,7 @@ class CityController extends AbstractController
      */
     public function edit(Request $request, City $city): Response
     {
-        $form = $this->createForm(City1Type::class, $city);
+        $form = $this->createForm(CityType::class, $city);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();

@@ -6,7 +6,7 @@ namespace App\Controller;
 
 use App\Entity\City;
 use App\Repository\CityRepository;
-use App\Service\Builder\CityBuilder;
+use App\Service\Builder\CityBuilderService;
 use App\Service\Domain\CityService;
 use App\Service\WeatherApi\ApiCityService;
 use Exception;
@@ -31,7 +31,7 @@ class HomeController extends AbstractController
      * @param ApiCityService $apiCityService
      * @param CityRepository $cityRepository
      * @param CityService $cityService
-     * @param CityBuilder $cityBuilder
+     * @param CityBuilderService $cityBuilder
      * @return JsonResponse
      * @throws JsonException
      * @throws ClientExceptionInterface
@@ -43,7 +43,7 @@ class HomeController extends AbstractController
                             ApiCityService $apiCityService,
                             CityRepository $cityRepository,
                             CityService $cityService,
-                            CityBuilder $cityBuilder): JsonResponse
+                            CityBuilderService $cityBuilder): JsonResponse
     {
         try {
             $city = new City();

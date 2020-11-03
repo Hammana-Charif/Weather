@@ -94,6 +94,12 @@ a {
   color: white;
 }
 
+#mat-spinner-div {
+  background-image: url("assets/pictures/25.gif");
+  background-size: auto;
+  background-attachment: fixed;
+}
+
 #homeMain {
   background-image: url("assets/pictures/home.jpg");
   background-size: cover;
@@ -101,28 +107,24 @@ a {
 }
 
 #searchMain {
-  height: 50%;
   background-image: url("assets/pictures/search.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 
 #resultMain {
-  flex: 1 1 auto;
   background-image: url("assets/pictures/result.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 
 #loginMain {
-  flex: 1 1 auto;
   background-image: url("assets/pictures/home.jpg");
   background-size: cover;
   background-attachment: fixed
 }
 
 #userMain {
-  flex: 1 1 auto;
   background-image: url("assets/pictures/home.jpg");
   background-size: cover;
   background-attachment: fixed

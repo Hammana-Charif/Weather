@@ -19,4 +19,4 @@ const routes: Routes = [
 export class AppRoutingModule {
 }
 
-export const routingComponents = [AppComponent, SearchComponent, ResultComponent];
+export const routingComponents = [AppComponent, SearchComponent, ResultComponent, PageNotFoundComponent];

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {SpinnerService} from '../../spinner/spinner.service';
+
 
 @Component({
   selector: 'app-result',
@@ -12,12 +14,13 @@ export class ResultComponent implements OnInit {
   /**
    * @description my lovely description
    * @param activatedRoute
-   * @param pollutionService
+   * @param spinnerService
    */
-  constructor(public activatedRoute: ActivatedRoute) {
+  constructor(public activatedRoute: ActivatedRoute, private spinnerService: SpinnerService) {
   }
 
   ngOnInit(): void {
+    this.spinnerService.requestEnded();
     this.activatedRoute.queryParams.subscribe(
       (data) => {
         const receivedData = JSON.stringify(data);

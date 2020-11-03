@@ -14,16 +14,16 @@ import {LayoutModule} from '@angular/cdk/layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {SharedComponent} from './shared/shared.component';
 import {CommonModule} from '@angular/common';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SharedComponent,
     routingComponents,
-    PageNotFoundComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +40,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatToolbarModule,
     CommonModule,
     MatProgressBarModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     MatProgressBarModule
