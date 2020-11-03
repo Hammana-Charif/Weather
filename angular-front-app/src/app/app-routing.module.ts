@@ -6,6 +6,7 @@ import {ResultComponent} from './pollution/result/result.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  {path: '', component: SearchComponent},
   {path: 'home', component: AppComponent},
   {path: 'search', component: SearchComponent},
   {path: 'result', component: ResultComponent},
