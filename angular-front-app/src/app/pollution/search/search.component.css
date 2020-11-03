@@ -1,0 +1,18 @@
+input {
+  width: 80%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#inputDiv {
+  width: 50%;
+  box-shadow: 0 0 15px 8px white inset;
+}
+
+button {
+  width: 10%;
+  padding: 15px 0;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

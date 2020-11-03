@@ -1,12 +1,12 @@
-main div:nth-child(1), main div:nth-child(3){
+main div:nth-child(1), main div:nth-child(3) {
   color: blue;
   font-size: 50px;
 }
 
-main div:nth-child(1){
+main div:nth-child(1) {
   margin-top: 20px;
 }
 
-main div:nth-child(2){
+main div:nth-child(2) {
   width: 50%;
 }

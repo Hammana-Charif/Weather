@@ -20,15 +20,15 @@
         <tbody>
         {% for city in cities %}
             <tr>
-                <td>{{ city.id }}</td>
+                <td>{{ city.cityId }}</td>
                 <td>{{ city.name }}</td>
                 <td>{{ city.airQuality }}</td>
                 <td>{{ city.fineParticle }}</td>
                 <td>{{ city.heavyParticle }}</td>
                 <td>{{ city.ozone }}</td>
                 <td>
-                    <a href="{{ path('city_show', {'id': city.id}) }}">show</a>
-                    <a href="{{ path('city_edit', {'id': city.id}) }}">edit</a>
+                    <a href="{{ path('city_show', {'id': city.cityId}) }}">show</a>
+                    <a href="{{ path('city_edit', {'id': city.cityId}) }}">edit</a>
                 </td>
             </tr>
         {% else %}

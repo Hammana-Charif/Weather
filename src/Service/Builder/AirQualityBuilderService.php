@@ -9,8 +9,6 @@ class AirQualityBuilderService
 {
     public function buildCity(string $key, array $fundedApiCity)
     {
-
-
         $fundedApiCity['city']['name'] = $fundedApiCity['city']['name'] ?? "";
         $fundedApiCity['aqi'] = (float)$fundedApiCity['aqi'] ?? 0;
         $fundedApiCity['iaqi'][$key] = (float)$fundedApiCity['iaqi'][$key]['v'] ?? null;

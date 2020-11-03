@@ -37,10 +37,6 @@ h1 {
   opacity: 0;
 }
 
-.loaded #loader-wrapper {
-  visibility: hidden;
-}
-
 .loaded #loader {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
@@ -51,28 +47,27 @@ h1 {
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
-
+  visibility: hidden;
   -webkit-transition: all 0.3s 0.6s ease-out;
   transition: all 0.3s 0.6s ease-out;
 }
 
 .loaded #loader-wrapper .loader-section.section-right,
 .loaded #loader-wrapper .loader-section.section-left {
-
   -webkit-transition: all 0.3s 0.3s ease-out;
   transition: all 0.3s 0.3s ease-out;
 }
 
 .loaded #loader-wrapper .loader-section.section-left {
-  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(-100%);  /* IE 9 */
-  transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transform: translateX(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%); /* IE 9 */
+  transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
 }
 
 .loaded #loader-wrapper .loader-section.section-right {
-  -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(100%);  /* IE 9 */
-  transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transform: translateX(100%); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%); /* IE 9 */
+  transform: translateX(100%); /* Firefox 16+, IE 10+, Opera */
 }
 
 #content {
@@ -93,7 +88,6 @@ h1 {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #3498db;
-
   -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
   z-index: 1001;
@@ -109,12 +103,11 @@ h1 {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #e74c3c;
-
   -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
 
-#loader:after {
+#loader::after {
   content: "";
   position: absolute;
   top: 15px;
@@ -124,34 +117,33 @@ h1 {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #f9c922;
-
   -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
 
 @-webkit-keyframes spin {
-  0%   {
-    -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);  /* IE 9 */
-    transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  0% {
+    -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg); /* IE 9 */
+    transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
   }
   100% {
-    -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);  /* IE 9 */
-    transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg); /* IE 9 */
+    transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
   }
 }
 
 @keyframes spin {
-  0%   {
-    -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);  /* IE 9 */
-    transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  0% {
+    -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg); /* IE 9 */
+    transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
   }
   100% {
-    -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);  /* IE 9 */
-    transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg); /* IE 9 */
+    transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
   }
 }
 
@@ -199,7 +191,7 @@ h1 {
   visibility: hidden;
 }
 
-.clearfix:before,
+.clearfix::before,
 .clearfix:after {
   content: " ";
   display: table;
@@ -236,7 +228,7 @@ h1 {
     text-decoration: underline;
   }
 
-  a[href]:after {
+  a[href]::after {
     content: " (" attr(href) ")";
   }
 
@@ -244,8 +236,8 @@ h1 {
     content: " (" attr(title) ")";
   }
 
-  .ir a:after,
-  a[href^="javascript:"]:after,
+  .ir a::after,
+  a[href^="javascript:"]::after,
   a[href^="#"]:after {
     content: "";
   }
