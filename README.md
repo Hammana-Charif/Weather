@@ -22,7 +22,6 @@ composer require logger
 Symfony check:security
 
 npm install --save-dev file-loader
-
 ````
 
 * Project structure
@@ -66,7 +65,6 @@ Weather/
 |   └─ cache/
 |
 └─ vendor/
-    
 ````
 
 * Install webpack encore
@@ -96,6 +94,8 @@ ng add @angular/material
 [Angular](https://angular.io/)
 
 * Install Materialize CSS(optional)
+
+
 ````bash
 npm install materialize-css@next(optional)
 ````
@@ -103,6 +103,8 @@ npm install materialize-css@next(optional)
 [Materialize](https://materializecss.com/)
 
 * Install SASS SCSS(optional)
+
+
 ````bash
 npm install sass-loader@^8.0.0 node-sass(optional)
 ````
