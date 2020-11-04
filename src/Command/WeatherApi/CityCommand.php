@@ -60,15 +60,15 @@ class CityCommand extends Command
             $output->writeln('Funded city : ' . $cityName);
             return static::SUCCESS;
         } catch (JsonException $e) {
-            echo $e->getMessage();
+            $output->writeln($e->getMessage());
         } catch (ClientExceptionInterface $e) {
-            echo $e->getMessage();
+            $output->writeln($e->getMessage());
         } catch (RedirectionExceptionInterface $e) {
-            echo $e->getMessage();
+            $output->writeln($e->getMessage());
         } catch (ServerExceptionInterface $e) {
-            echo $e->getMessage();
+            $output->writeln($e->getMessage());
         } catch (TransportExceptionInterface $e) {
-            echo  $e->getMessage();
+            $output->writeln($e->getMessage());
         }
     }
 }

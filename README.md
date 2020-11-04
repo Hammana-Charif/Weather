@@ -6,7 +6,6 @@ part. In the future, why not weather data and this by city.
 ## Project setup
 
 * Initialize new project symfony
-
 ````bash
 symfony new 'project-name'
 
@@ -25,7 +24,6 @@ npm install --save-dev file-loader
 ````
 
 * Project structure
-
 ````bash
 Weather/
 |
@@ -68,15 +66,13 @@ Weather/
 ````
 
 * Install webpack encore
-
 ````bash
 composer require symfony/webpack-encore-bundle
 
 npm install @symfony/webpack-encore --save-dev
 ````
 
-* Install angular
-
+* Install angular [Angular](https://angular.io/)
 ````bash
 npm install -g @angular/cli
 
@@ -88,30 +84,27 @@ ng serve --open
 
 ng add @angular/material
 ````
-[Angular](https://angular.io/)
 
-* Install Materialize CSS(optional)
-
+* Install Materialize CSS(optional) [Materialize](https://materializecss.com/)
 ````bash
 npm install materialize-css@next(optional)
 ````
-[Materialize](https://materializecss.com/)
 
-* Install SASS SCSS(optional)
+
+* Install SASS SCSS(optional) [SASS](https://sass-lang.com/)
 ````bash
 npm install sass-loader@^8.0.0 node-sass(optional)
 ````
-[SASS](https://sass-lang.com/)
-
 
 ## PHPStorm setup
-
 ````bash
-server configuration
+PHP version: 7.4
+CLI interpreter: 7.4.11
+symfony version: 5.1
+server configuration: MariaDB: 10.4.14
 ````
 
 ### SQL Commands for database
-
 ```sql
 create table city
 (

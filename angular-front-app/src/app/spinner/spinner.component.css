@@ -3,7 +3,7 @@
   top: 0;
   width: 51%;
   height: 100%;
-  background: #222222;
+  background: #222;
   z-index: 1000;
 }
 
@@ -17,7 +17,7 @@
 
 p {
   line-height: 1.33em;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 
 #loader-wrapper {
@@ -30,11 +30,7 @@ p {
 }
 
 h1 {
-  color: #EEEEEE;
-}
-
-.loaded #loader {
-  opacity: 0;
+  color: #EEE;
 }
 
 .loaded #loader {
@@ -93,7 +89,7 @@ h1 {
   z-index: 1001;
 }
 
-#loader:before {
+#loader::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -127,6 +123,7 @@ h1 {
     -ms-transform: rotate(0deg); /* IE 9 */
     transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
   }
+
   100% {
     -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: rotate(360deg); /* IE 9 */
@@ -140,6 +137,7 @@ h1 {
     -ms-transform: rotate(0deg); /* IE 9 */
     transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
   }
+
   100% {
     -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: rotate(360deg); /* IE 9 */
@@ -154,7 +152,7 @@ h1 {
   *text-indent: -9999px;
 }
 
-.ir:before {
+.ir::before {
   content: "";
   display: block;
   width: 0;
@@ -192,12 +190,12 @@ h1 {
 }
 
 .clearfix::before,
-.clearfix:after {
+.clearfix::after {
   content: " ";
   display: table;
 }
 
-.clearfix:after {
+.clearfix::after {
   clear: both;
 }
 
@@ -209,12 +207,6 @@ h1 {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-(-o-min-device-pixel-ratio: 5/4),
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) {
-}
-
 @media print {
   * {
     background: transparent !important;
@@ -224,7 +216,7 @@ h1 {
   }
 
   a,
-  a:visited {
+  a::visited {
     text-decoration: underline;
   }
 
@@ -232,7 +224,7 @@ h1 {
     content: " (" attr(href) ")";
   }
 
-  abbr[title]:after {
+  abbr[title]::after {
     content: " (" attr(title) ")";
   }
 
