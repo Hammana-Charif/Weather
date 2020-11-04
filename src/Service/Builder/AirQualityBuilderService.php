@@ -4,21 +4,41 @@
 namespace App\Service\Builder;
 
 
+use Exception;
+use stdClass;
 
+/**
+ * Class AirQualityBuilderService
+ * @package App\Service\Builder
+ */
 class AirQualityBuilderService
 {
-    public function buildCity(string $key, array $fundedApiCity)
+    /**
+     * @param array $fundedApiCity
+     * @return stdClass
+     */
+    public function buildApiCity(array $fundedApiCity): stdClass
     {
-        $fundedApiCity['city']['name'] = $fundedApiCity['city']['name'] ?? "";
-        $fundedApiCity['aqi'] = (float)$fundedApiCity['aqi'] ?? 0;
-        $fundedApiCity['iaqi'][$key] = (float)$fundedApiCity['iaqi'][$key]['v'] ?? null;
-        $fundedApiCity['iaqi'][$key] = (float)$fundedApiCity['iaqi'][$key]['v'] ?? null;
-        $fundedApiCity['iaqi'][$key] = (float)$fundedApiCity['iaqi'][$key]['v'] ?? null;
-        $fundedApiCity['time']['s'] = $fundedApiCity['time']['s'] ?? "";
-
-        $key = array_key_exists($key, $fundedApiCity['iaqi'])
-            ? (float)$fundedApiCity['iaqi'][$key]['v']
-            : null;
-        return $key;
+        try {
+            $apiCity = new stdClass();
+            $apiCity->name = $fundedApiCity['city']['name'] ?? "";
+            $apiCity->airQuality = (float)$fundedApiCity['aqi'] ?? null;
+            $apiCity->fineParticle
+                = array_key_exists('pm25', $fundedApiCity['iaqi'])
+                ? (float)$fundedApiCity['iaqi']['pm25']['v']
+                : null;
+            $apiCity->heavyParticle
+                = array_key_exists('pm10', $fundedApiCity['iaqi'])
+                ? (float)$fundedApiCity['iaqi']['pm10']['v']
+                : null;
+            $apiCity->ozone
+                = array_key_exists('o3', $fundedApiCity['iaqi'])
+                ? (float)$fundedApiCity['iaqi']['o3']['v']
+                : null;
+            $apiCity->dateTime = $fundedApiCity['time']['s'] ?? "";
+            return $apiCity;
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
+        }
     }
 }

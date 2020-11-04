@@ -7,7 +7,6 @@ part. In the future, why not weather data and this by city.
 
 * Initialize new project symfony
 
-
 ````bash
 symfony new 'project-name'
 
@@ -25,7 +24,6 @@ npm install --save-dev file-loader
 ````
 
 * Project structure
-
 
 ````bash
 Weather/
@@ -69,7 +67,6 @@ Weather/
 
 * Install webpack encore
 
-
 ````bash
 composer require symfony/webpack-encore-bundle
 
@@ -77,7 +74,6 @@ npm install @symfony/webpack-encore --save-dev
 ````
 
 * Install angular
-
 
 ````bash
 npm install -g @angular/cli
@@ -95,7 +91,6 @@ ng add @angular/material
 
 * Install Materialize CSS(optional)
 
-
 ````bash
 npm install materialize-css@next(optional)
 ````
@@ -103,7 +98,6 @@ npm install materialize-css@next(optional)
 [Materialize](https://materializecss.com/)
 
 * Install SASS SCSS(optional)
-
 
 ````bash
 npm install sass-loader@^8.0.0 node-sass(optional)
